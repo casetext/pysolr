@@ -254,7 +254,7 @@ class Solr(object):
         self.decoder = decoder or json.JSONDecoder()
         self.url = url
         self.timeout = timeout
-        self.auth = auth
+        self.auth = auth or {}
         self.log = self._get_log()
         self.session = requests.Session()
         self.session.stream = False
